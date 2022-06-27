@@ -1,0 +1,56 @@
+@use 'root';
+
+.empCard{
+  border: 1px solid root.$enuygun-text-dark;
+  padding: .3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: root.$enuygun-border-radius;
+  margin-bottom: .8rem;
+  width: 100%;
+  .emp{
+    width: 15%;
+    order: 1;
+    a{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    margin: auto;
+    .empName{
+      color: root.$enuygun-text-dark;
+      font-size:.97rem;
+      margin-left: .5rem;
+      font-weight: bold;
+    }
+  }
+  .job{
+    order:2;
+    width: 75%;
+    font-size: .80rem;
+    color: root.$enuygun-text-default;
+    margin-top: 0.23rem;
+  }
+  .vote{
+    order:3;
+    width: 8%;
+    align-items: center;
+    margin: auto;
+    padding: .3rem;
+    background: root.$enuygun-green;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: root.$enuygun-border-radius;
+    color: #fff;
+    &:hover{
+      background: root.$enuygun-dark-green;
+    }
+  }
+}

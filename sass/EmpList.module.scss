@@ -1,0 +1,16 @@
+@use 'root'; //css variables
+
+.section{
+  width: 100%;
+  .title{
+    color: root.$enuygun-text-default;
+    span{
+      color: root.$enuygun-green;
+    }
+  }
+  .empList{
+    width: 100%;
+    margin: .8rem;
+    padding: 1rem;
+  }
+}

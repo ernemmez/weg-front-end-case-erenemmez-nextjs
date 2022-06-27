@@ -1,9 +1,43 @@
-import styles from './EmpCard.module.scss'
+import styles from '../../sass/EmpCard.module.scss'
+import Avatar from '@mui/material/Avatar'
+import {FaVoteYea} from 'react-icons/fa'
+import Link from 'next/link'
+import {useSelector,useDispatch} from "react-redux"
+import {increaseVote} from '../../redux/employees'
+import {useState,useEffect,memo} from "react";
 
-function EmpCard(props) {
+
+const EmpCard = (props) => {
+    const dispatch = useDispatch();
+    const {employees} = useSelector(state => state.employees)
+    const [currentEmp,setCurrentEmp] = useState(employees.find(emp => emp.id === props.id))
+
+    useEffect(()=>{
+        setCurrentEmp(employees.find(emp => emp.id === props.id))
+    },[employees, props.id])
+
+    const handleVote = () => {
+        dispatch(increaseVote(currentEmp.id));
+    }
+
     return (
-        <div className={styles.empCard}></div>
+        <div className={styles.empCard}>
+            <div className={styles.emp}>
+                <Link href={`/employeeDetail/${props.id}`}>
+                    <a>
+                        <Avatar alt={`Enuygun,Emp Name`} src={currentEmp.avatar} />
+                        <span className={styles.empName}>{`${currentEmp.name} ${currentEmp.surname}`}</span>
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.job}>
+                {currentEmp.job}
+            </div>
+            <button className={styles.vote} onClick={handleVote}>
+                <FaVoteYea/> {currentEmp.vote}
+            </button>
+        </div>
     );
 }
 
-export default EmpCard;
+export default memo(EmpCard);
