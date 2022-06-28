@@ -4,6 +4,7 @@ import {wrapper} from "../../redux/store"
 import {setEmployees} from "../../redux/employees"
 import {useSelector} from "react-redux"
 import {useEffect} from "react"
+import Head from "next/head";
 
 const Voting = (props) => {
     const {employees} = useSelector(state => state.employees)
@@ -14,11 +15,17 @@ const Voting = (props) => {
     }, [employees]);
 
     return (
-        <main className={styles.voting}>
-            <section className={styles.votingList}>
-                <EmpList/>
-            </section>
-        </main>
+      <>
+          <Head>
+              <title>Vote Employee | Eren Emmez | WEG Front End Case</title>
+              <meta name="description" content="Bu proje Eren Emmez tarafından WEG Front End Developer Case için hazırlanmıştır" />
+          </Head>
+          <main className={styles.voting}>
+              <section className={styles.votingList}>
+                  <EmpList/>
+              </section>
+          </main>
+      </>
     );
 }
 export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
