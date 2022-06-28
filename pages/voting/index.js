@@ -1,4 +1,4 @@
-import styles from '../../sass/Voting.module.scss'
+import styles from '../../sass/Voting.module.sass'
 import EmpList from "../../components/empList"
 import {memo} from "react";
 

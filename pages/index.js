@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../sass/Home.module.scss'
+import styles from '../sass/Home.module.sass'
 import Link from 'next/link'
 import {memo} from "react";
 

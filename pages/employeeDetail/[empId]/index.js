@@ -1,4 +1,4 @@
-import styles from '../../../sass/EmployeeDetail.module.scss'
+import styles from '../../../sass/EmployeeDetail.module.sass'
 import {useRouter} from "next/router"
 import {useEffect,memo} from "react";
 import {useDispatch, useSelector} from "react-redux"
@@ -14,7 +14,8 @@ const EmployeeDetail = ({movies}) => {
         fetch(`https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees/${empId}`)
             .then(res => res.json())
             .then(data => dispatch(setEmployee(data)))
-    },[dispatch, empId])
+        console.log(`${employee.name} Detayları Yüklendi.`)
+    },[dispatch, empId, employee.name])
 
     return(
         <main className={styles.empDetail}>

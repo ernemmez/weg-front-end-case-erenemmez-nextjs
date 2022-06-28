@@ -23,13 +23,13 @@ export const employeeSlice = createSlice({
     reducers: {
        setEmployees:(state,action) => {
           const storageEmployees = JSON.parse(localStorage.getItem('employees'))
-           if(state.employees.length > 0){
-               //emp'ler state'de var
-           }else if(storageEmployees){ //statede yok local storage'da var
+           if(storageEmployees){
                state.employees = storageEmployees;
-           }else{ //hem state içinde hemde storage'da yok
+               console.log('Employees Added to State');
+           }else{
                state.employees = action.payload;
                localStorage.setItem('employees',JSON.stringify(action.payload))
+               console.log('Employees to be Added to Local Storage Setted');
            }
        },
         increaseVote:(state,action) => {

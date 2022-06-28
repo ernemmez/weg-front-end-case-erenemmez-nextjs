@@ -1,4 +1,4 @@
-import styles from '../../sass/EmpCard.module.scss'
+import styles from '../../sass/EmpCard.module.sass'
 import Avatar from '@mui/material/Avatar'
 import {FaVoteYea} from 'react-icons/fa'
 import Link from 'next/link'

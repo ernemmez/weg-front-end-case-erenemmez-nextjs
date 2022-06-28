@@ -1,4 +1,4 @@
-import '../sass/globals.scss'
+import '../sass/globals.sass'
 import {wrapper} from "../redux/store";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
