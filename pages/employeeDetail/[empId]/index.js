@@ -1,21 +1,29 @@
 import styles from '../../../sass/EmployeeDetail.module.scss'
 import {useRouter} from "next/router"
-import {useState,useEffect,memo} from "react";
-import {useSelector} from "react-redux"
+import {useEffect,memo} from "react";
+import {useDispatch, useSelector} from "react-redux"
+import {setEmployee} from "../../../redux/employees";
 
-const EmployeeDetail = () => {
+const EmployeeDetail = ({movies}) => {
+    const dispatch = useDispatch()
     const router = useRouter()
-    const {employees} = useSelector(state => state.employees)
     const { empId } = router.query
-    const [currentEmp,setCurrentEmp] = useState(employees.find(emp => emp.id === empId))
+    const {employee} = useSelector(state => state.employees)
+
+    useEffect(()=>{
+        fetch(`https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees/${empId}`)
+            .then(res => res.json())
+            .then(data => dispatch(setEmployee(data)))
+    },[dispatch, empId])
 
     return(
         <main className={styles.empDetail}>
             <section className={styles.avatar}>
-                <img src={currentEmp.avatar} alt={`${currentEmp.name} ${currentEmp.surname}`}/>
+                <img src={employee.avatar} alt={`${employee.name} ${employee.surname}`} className={styles.avatarImage}/>
+                <img src='/enuygun.svg' alt='Enuygun' className={styles.enuygun}/>
                 <div>
-                    <h2 className={styles.empName}>{`${currentEmp.name} ${currentEmp.surname}`}</h2>
-                    <span className={styles.empVote}> <b className={styles.property}>Oy Sayısı :</b>{currentEmp.vote}</span>
+                    <h2 className={styles.empName}>{`${employee.name} ${employee.surname}`}</h2>
+                    <span className={styles.empVote}> <b className={styles.property}>Oy Sayısı :</b>{employee.vote}</span>
                 </div>
             </section>
             <section className={styles.body}>
@@ -25,30 +33,30 @@ const EmployeeDetail = () => {
                     </li>
                     <li>
                         <b className={styles.property}>Department : </b>
-                        <span className={styles.data}>{currentEmp.department}</span>
+                        <span className={styles.data}>{employee.department}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Team : </b>
-                        <span className={styles.data}>{currentEmp.team}</span>
+                        <span className={styles.data}>{employee.team}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Job : </b>
-                        <span className={styles.data}>{currentEmp.job}</span>
+                        <span className={styles.data}>{employee.job}</span>
                     </li>
                     <li>
                         <i className={styles.infoHead}>Contact</i>
                     </li>
                     <li>
                         <b className={styles.property}>Email : </b>
-                        <span className={styles.data}>{currentEmp.email}</span>
+                        <span className={styles.data}>{employee.email}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Phone : </b>
-                        <span className={styles.data}>{currentEmp.phone}</span>
+                        <span className={styles.data}>{employee.phone}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Adress : </b>
-                        <span className={styles.data}>{currentEmp.adress}</span>
+                        <span className={styles.data}>{employee.adress}</span>
                     </li>
                 </ul>
             </section>

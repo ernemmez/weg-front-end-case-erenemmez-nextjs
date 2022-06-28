@@ -10,8 +10,9 @@
   border-radius: root.$enuygun-border-radius;
   margin-bottom: .8rem;
   width: 100%;
+  flex-wrap: wrap;
   .emp{
-    width: 15%;
+    flex-grow: 1;
     order: 1;
     a{
       display: flex;
@@ -32,14 +33,14 @@
   }
   .job{
     order:2;
-    width: 75%;
+    flex-grow: 4;
     font-size: .80rem;
     color: root.$enuygun-text-default;
     margin-top: 0.23rem;
   }
   .vote{
     order:3;
-    width: 8%;
+    width: 10%;
     align-items: center;
     margin: auto;
     padding: .3rem;
