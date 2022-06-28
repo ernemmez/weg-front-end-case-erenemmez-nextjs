@@ -21,12 +21,15 @@ const EmpCard = (props) => {
     }
 
     return (
-        <div className={styles.empCard}>
+        <div className={styles.empCard} style={props.index === 0 ? {backgroundColor:'#2BD361C0'} : null}>
             <div className={styles.emp}>
                 <Link href={`/employeeDetail/${props.id}`}>
                     <a>
                         <Avatar alt={`Enuygun,Emp Name`} src={currentEmp.avatar} />
-                        <span className={styles.empName}>{`${currentEmp.name} ${currentEmp.surname}`}</span>
+                        <span className={styles.empName}>
+                            {`${currentEmp.name} ${currentEmp.surname}`}
+                            {props.index === 0 ? '  ⭐️' : null}
+                        </span>
                     </a>
                 </Link>
             </div>

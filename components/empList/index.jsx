@@ -20,7 +20,7 @@ const EmpList = (props) => {
                <span>Wingie Enuygun</span> Employee of the Month Ranking
            </h2>
            <div className={styles.empList}>
-               {sortedEmp.map((emp) => <EmpCard  key={emp.id} id={emp.id}/> )}
+               {sortedEmp.map((emp,index) => <EmpCard key={index} index={index} id={emp.id}/> )}
            </div>
        </section>
     )
