@@ -1,30 +1,14 @@
 import styles from '../../../sass/EmployeeDetail.module.sass'
-import {useRouter} from "next/router"
-import {useEffect,memo} from "react";
-import {useDispatch, useSelector} from "react-redux"
-import {setEmployee} from "../../../redux/employees";
 
-const EmployeeDetail = ({movies}) => {
-    const dispatch = useDispatch()
-    const router = useRouter()
-    const { empId } = router.query
-    const {employee} = useSelector(state => state.employees)
-
-    useEffect(()=>{
-        fetch(`https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees/${empId}`)
-            .then(res => res.json())
-            .then(data => dispatch(setEmployee(data)))
-        console.log(`${employee.name} Detayları Yüklendi.`)
-    },[dispatch, empId, employee.name])
-
+const EmployeeDetail = ({currentEmp}) => {
     return(
         <main className={styles.empDetail}>
             <section className={styles.avatar}>
-                <img src={employee.avatar} alt={`${employee.name} ${employee.surname}`} className={styles.avatarImage}/>
+                <img src={currentEmp.avatar} alt={`${currentEmp.name} ${currentEmp.surname}`} className={styles.avatarImage}/>
                 <img src='/enuygun.svg' alt='Enuygun' className={styles.enuygun}/>
                 <div>
-                    <h2 className={styles.empName}>{`${employee.name} ${employee.surname}`}</h2>
-                    <span className={styles.empVote}> <b className={styles.property}>Oy Sayısı :</b>{employee.vote}</span>
+                    <h2 className={styles.empName}>{`${currentEmp.name} ${currentEmp.surname}`}</h2>
+                    <span className={styles.empVote}> <b className={styles.property}>Oy Sayısı :</b>{currentEmp.vote}</span>
                 </div>
             </section>
             <section className={styles.body}>
@@ -34,34 +18,42 @@ const EmployeeDetail = ({movies}) => {
                     </li>
                     <li>
                         <b className={styles.property}>Department : </b>
-                        <span className={styles.data}>{employee.department}</span>
+                        <span className={styles.data}>{currentEmp.department}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Team : </b>
-                        <span className={styles.data}>{employee.team}</span>
+                        <span className={styles.data}>{currentEmp.team}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Job : </b>
-                        <span className={styles.data}>{employee.job}</span>
+                        <span className={styles.data}>{currentEmp.job}</span>
                     </li>
                     <li>
                         <i className={styles.infoHead}>Contact</i>
                     </li>
                     <li>
                         <b className={styles.property}>Email : </b>
-                        <span className={styles.data}>{employee.email}</span>
+                        <span className={styles.data}>{currentEmp.email}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Phone : </b>
-                        <span className={styles.data}>{employee.phone}</span>
+                        <span className={styles.data}>{currentEmp.phone}</span>
                     </li>
                     <li>
                         <b className={styles.property}>Adress : </b>
-                        <span className={styles.data}>{employee.adress}</span>
+                        <span className={styles.data}>{currentEmp.adress}</span>
                     </li>
                 </ul>
             </section>
         </main>
     )
 }
-export default memo(EmployeeDetail);
+export const getServerSideProps = async (context) => {
+    const { empId } = context.query
+    const response = await fetch(`https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees/${empId}`)
+    const currentEmp = await response.json()
+
+    console.log(`Fetched Employee: ${currentEmp.name}`);
+    return { props: { currentEmp } };
+}
+export default EmployeeDetail;

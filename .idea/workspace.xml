@@ -4,19 +4,14 @@
     <list default="true" id="1b281541-6ace-4b5b-97e2-3a213b91fb8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/empCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/empCard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/empList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/empList/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/employeeDetail/[empId]/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/employeeDetail/[empId]/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/voting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/voting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/employees/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/employees/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/EmpCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/EmpCard.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/EmpList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/EmpList.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/EmployeeDetail.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/EmployeeDetail.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Home.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Voting.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Voting.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/_root.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/globals.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "CONST",
     "last_opened_file_path": "/Users/erenemmez/Desktop/weg-front-end-case-erenemmez-nextjs",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,10 +46,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/middleware" />
       <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/pages/voting/employee" />
       <recent name="$PROJECT_DIR$/pages/voting" />
+      <recent name="$PROJECT_DIR$/middleware" />
+      <recent name="$PROJECT_DIR$/pages/voting/employee" />
       <recent name="$PROJECT_DIR$/pages/voting/employeeDetail" />
     </key>
   </component>
@@ -66,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656256638816</updated>
       <workItem from="1656256640703" duration="55577000" />
-      <workItem from="1656357174385" duration="20649000" />
+      <workItem from="1656357174385" duration="36087000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,9 @@
 import Head from 'next/head'
 import styles from '../sass/Home.module.sass'
 import Link from 'next/link'
-import {memo} from "react";
 
 
-
-function Home() {
+const Home = () => {
     return (
     <div className={styles.container}>
       <Head>
@@ -22,4 +20,4 @@ function Home() {
     </div>
   )
 }
-export default memo(Home);
+export default Home;

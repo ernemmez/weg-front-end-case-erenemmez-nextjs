@@ -23,7 +23,8 @@ const EmpCard = (props) => {
     return (
         <div className={styles.empCard}>
             <div className={styles.emp}>
-                <Link href={`/employeeDetail/${props.id}`}>
+                <Link href={`
+                /employeeDetail/${props.id}`}>
                     <a>
                         <Avatar alt={`Enuygun,Emp Name`} src={currentEmp.avatar} />
                         <span className={styles.empName}>{`${currentEmp.name} ${currentEmp.surname}`}</span>
