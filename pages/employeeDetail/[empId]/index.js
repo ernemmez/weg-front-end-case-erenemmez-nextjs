@@ -57,7 +57,7 @@ const EmployeeDetail = ({currentEmp}) => {
 }
 export const getServerSideProps = async (context) => {
     const { empId } = context.query
-    const response = await fetch(process.env.baseAPIUrl +'/'+ empId)
+    const response = await fetch(process.env.baseAPIUrl +'/'+ empId) //https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees/:id
     const currentEmp = await response.json()
 
     console.log(`Fetched Employee: ${currentEmp.name}`);

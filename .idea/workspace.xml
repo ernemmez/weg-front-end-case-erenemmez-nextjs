@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b281541-6ace-4b5b-97e2-3a213b91fb8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/EmployeeDetail.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sass/EmployeeDetail.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Voting.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Voting.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/employeeDetail/[empId]/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/employeeDetail/[empId]/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/voting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/voting/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,20 +23,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/erenemmez/Desktop/weg-front-end-case-erenemmez-nextjs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/erenemmez/Desktop/weg-front-end-case-erenemmez-nextjs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages" />
@@ -55,7 +55,9 @@
       <option name="presentableId" value="Default" />
       <updated>1656256638816</updated>
       <workItem from="1656256640703" duration="55577000" />
-      <workItem from="1656357174385" duration="39288000" />
+      <workItem from="1656357174385" duration="39728000" />
+      <workItem from="1656451015632" duration="121000" />
+      <workItem from="1656502918668" duration="64000" />
     </task>
     <servers />
   </component>

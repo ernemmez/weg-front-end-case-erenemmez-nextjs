@@ -29,7 +29,7 @@ const Voting = (props) => {
     );
 }
 export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
-    const response = await fetch(process.env.baseAPIUrl)
+    const response = await fetch(process.env.baseAPIUrl) //https://62b8d77803c36cb9b7cc660f.mockapi.io/api/employees
     const data = await response.json()
     store.dispatch(setEmployees(data))
 })
